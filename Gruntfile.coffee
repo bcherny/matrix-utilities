@@ -1,14 +1,15 @@
 module.exports = (grunt) ->
 
-	name = 'matrix-utilities'
-
-	config =
+	grunt.config.init
 
 		coffee:
+
 			compile:
-				files: {}
+				files:
+					'matrix-utilities.js': 'matrix-utilities.coffee'
 
 		uglify:
+
 			options:
 				mangle:
 					toplevel: true
@@ -17,14 +18,15 @@ module.exports = (grunt) ->
 					unused: true
 					join_vars: true
 				comments: false
+
 			standard:
-				files: {}
+				files:
+					'matrix-utilities.min.js': [
+						'matrix-utilities.js'
+					]
 
 
-	config.coffee.compile.files[name + '.js'] = name + '.coffee'
-	config.uglify.standard.files[name + '.min.js'] = [name +'.js']
-
-	grunt.config.init config
 	grunt.loadNpmTasks 'grunt-contrib-coffee'
 	grunt.loadNpmTasks 'grunt-contrib-uglify'
+
 	grunt.registerTask 'default', ['coffee', 'uglify']

@@ -1,6 +1,6 @@
 # matrix-utilities
 
-Tiny, high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
+Tiny (516b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
 
 ## API
 
