@@ -105,7 +105,7 @@ exports.flip = (test) ->
 
 	test.done()
 
-expected.to2d = (test) ->
+exports.to2d = (test) ->
 
 	matrix = [
 		[1, 2, 3, 4]
@@ -123,7 +123,7 @@ expected.to2d = (test) ->
 	test.deepEqual actual, expected
 	test.done()
 
-expected.to3d = (test) ->
+exports.to3d = (test) ->
 
 	matrix = [
 		[1, 2, 3]
