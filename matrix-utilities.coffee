@@ -33,13 +33,25 @@ umd
 
 		for row, j in matrix
 			for value, k in row
-				result[k][j] = value
+				(result[k] or result[k] = [])[j] = value
 
 		result
 
 	to2d: (matrix) ->
 
+		[
+			[matrix[0][0], matrix[0][1], matrix[0][3]]
+			[matrix[1][0], matrix[1][1], matrix[1][3]]
+		]
+
 	to3d: (matrix) ->
+
+		[
+			[matrix[0][0], matrix[0][1], 0, matrix[0][3]]
+			[matrix[1][0], matrix[1][1], 0, matrix[1][3]]
+			[0, 0, 1, 0]
+			[0, 0, 0, 1]
+		]
 
 	Identity: ->
 
