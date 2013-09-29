@@ -22,6 +22,6 @@ exports.multiply = (test) ->
 		[ 7*1 + 8*3 + 9*5 , 7*2 + 8*4 + 9*6 ]
 	]
 
-	test.strictEqual actual, expected
+	test.deepEqual actual, expected
 
 	test.done()

@@ -15,10 +15,11 @@ umd
 			throw new Error 'Matrix 1\'s row count should equal matrix 2\'s column count'
 
 		size = one[0].length
-		result = two.slice()
+		result = []
 
-		for row, j in one
-			for value, k in two
+		for row, j in two
+			result[j] = []
+			for value, k in row
 				l = size
 				sum = 0
 				sum += one[j][l] * two[l][k] while l--
