@@ -39,28 +39,16 @@ umd
 
 	to2d: (matrix) ->
 
-		if matrix.length < 2
-			throw new Error 'Matrix should have at least 2 rows'
-
-		if matrix[0].length < 4
-			throw new Error 'Matrix should have at least 4 columns'
-
 		[
-			[matrix[0][0], matrix[0][1], matrix[0][3]]
-			[matrix[1][0], matrix[1][1], matrix[1][3]]
+			[matrix[0][0] or 1, matrix[0][1] or 0, matrix[0][3] or 0]
+			[matrix[1][0] or 0, matrix[1][1] or 1, matrix[1][3] or 0]
 		]
 
 	to3d: (matrix) ->
 
-		if matrix.length < 2
-			throw new Error 'Matrix should have at least 2 rows'
-			
-		if matrix[0].length < 3
-			throw new Error 'Matrix should have at least 3 columns'
-
 		[
-			[matrix[0][0], matrix[0][1], 0, matrix[0][2]]
-			[matrix[1][0], matrix[1][1], 0, matrix[1][2]]
+			[matrix[0][0] or 1, matrix[0][1] or 0, 0, matrix[0][2] or 0]
+			[matrix[1][0] or 0, matrix[1][1] or 1, 0, matrix[1][2] or 0]
 			[0, 0, 1, 0]
 			[0, 0, 0, 1]
 		]
