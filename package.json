@@ -1,14 +1,16 @@
 {
-  "name": "transform-to-matrix",
-  "version": "0.0.3",
-  "description": "A tiny library to get 2/3D matricies from CSS3 transform functions. Fully covered by unit tests, with support for AMD, CommonJS, Node, and browser globals.",
-  "main": "transform-to-matrix.js",
+  "name": "matrix-utilities",
+  "version": "0.0.1",
+  "description": "Tiny, high performance utilities for performing 2/3D matrix calculations. Full unit test coverage.",
+  "main": "tmatrix-utilities.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eighttrackmind/transform-to-matrix.git"
+    "url": "https://github.com/eighttrackmind/matrix-utilities.git"
   },
   "keywords": [
     "matrix",
+    "flip",
+    "identity",
     "css",
     "css3",
     "transform",
@@ -22,7 +24,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/eighttrackmind/transform-to-matrix/issues"
+    "url": "https://github.com/eighttrackmind/matrix-utilities/issues"
   },
   "scripts": {
     "test": "./node_modules/.bin/nodeunit test"
