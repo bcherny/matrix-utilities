@@ -19,13 +19,12 @@ umd
 
 		for row, j in one
 			for value, k in two
-
 				l = size
 				sum = 0
-
 				sum += one[j][l] * two[l][k] while l--
-
 				result[j][k] = sum
+
+		result
 
 	flip: (matrix) ->
 
