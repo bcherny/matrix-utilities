@@ -5,7 +5,7 @@ umd = (factory) ->
 	else if typeof define is 'function' and define.amd
 		define [], factory
 	else
-		@['transform-utilities'] = factory
+		@['matrix-utilities'] = factory
 
 umd
 	
