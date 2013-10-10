@@ -2,7 +2,7 @@
   "name": "matrix-utilities",
   "version": "1.0.0",
   "description": "Tiny (516b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.",
-  "main": "tmatrix-utilities.js",
+  "main": "matrix-utilities.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/eighttrackmind/matrix-utilities.git"
