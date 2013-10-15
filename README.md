@@ -1,5 +1,8 @@
 # matrix-utilities
 
+[![Build Status](https://travis-ci.org/eighttrackmind/matrix-utilities.png)](https://travis-ci.org/eighttrackmind/matrix-utilities.png)
+[![browser support](https://ci.testling.com/eighttrackmind/matrix-utilities.png)](https://ci.testling.com/eighttrackmind/matrix-utilities)
+
 Tiny (596b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
 
 ## API
