@@ -1,6 +1,6 @@
 # matrix-utilities
 
-Tiny (516b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
+Tiny (596b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
 
 ## API
 
@@ -10,6 +10,7 @@ util = require 'matrix-utilities'
 util.Identity() # returns new 3D identity matrix
 util.multiply matrix1, matrix2 # returns matrix1×matrix2
 util.flip matrix # flip a matrix along x=y
+util.toPrecision matrix, {Number}precision
 util.to2d matrix
 util.to3d matrix
 ```
