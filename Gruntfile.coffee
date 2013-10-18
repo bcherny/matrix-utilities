@@ -11,6 +11,8 @@ module.exports = (grunt) ->
 		coffee:
 			compile:
 				files: {}
+			options:
+				bare: true
 
 		uglify:
 			options:

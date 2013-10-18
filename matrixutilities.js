@@ -3,16 +3,17 @@
         module.exports = factory();
     }
     else if(typeof define === 'function' && define.amd) {
-        define('matrix-utilities', [], factory);
+        define('matrixutilities', [], factory);
     }
     else {
-        root.matrix-utilities = factory();
+        root.matrixutilities = factory();
     }
 }(this, function() {
-(function() {
-  var util;
+var matrixutilities;
 
-  util = {
+matrixutilities = (function() {
+  var util;
+  return util = {
     multiply: function(one, two) {
       var j, k, l, result, row, size, sum, value, _i, _j, _len, _len1;
       if (one[0].length !== two.length) {
@@ -57,8 +58,7 @@
       return [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]];
     }
   };
+})();
 
-}).call(this);
-
-    return matrix-utilities;
+    return matrixutilities;
 }));
