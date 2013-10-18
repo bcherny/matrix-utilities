@@ -1,13 +1,4 @@
-# UMD (play nice with AMD, CommonJS, globals)
-umd = (factory) ->
-	if typeof exports is 'object'
-		module.exports = factory
-	else if typeof define is 'function' and define.amd
-		define [], factory
-	else
-		@['matrix-utilities'] = factory
-
-umd
+util =
 	
 	multiply: (one, two) ->
 
