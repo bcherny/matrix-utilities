@@ -105,27 +105,6 @@ exports.flip = (test) ->
 
 	test.done()
 
-exports.toPrecision = (test) ->
-
-	matrix = [
-		[3.14159, 3.14159, 3.14159, 3.14159]
-		[-3.14159, -3.14159, -3.14159, -3.14159]
-		[3.14159, 3.14159, 3.14159, 3.14159]
-		[-3.14159, -3.14159, -3.14159, -3.14159]
-	]
-
-	actual = util.toPrecision matrix, 2
-	expected = [
-		[ '3.1', '3.1', '3.1', '3.1' ]
-		[ '-3.1', '-3.1', '-3.1', '-3.1' ]
-		[ '3.1', '3.1', '3.1', '3.1' ]
-		[ '-3.1', '-3.1', '-3.1', '-3.1' ]
-	]
-
-	test.deepEqual actual, expected
-
-	test.done()
-
 exports.to2d = (test) ->
 
 	matrix = [

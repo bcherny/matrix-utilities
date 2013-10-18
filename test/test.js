@@ -39,15 +39,6 @@ exports.flip = function(test) {
   return test.done();
 };
 
-exports.toPrecision = function(test) {
-  var actual, expected, matrix;
-  matrix = [[3.14159, 3.14159, 3.14159, 3.14159], [-3.14159, -3.14159, -3.14159, -3.14159], [3.14159, 3.14159, 3.14159, 3.14159], [-3.14159, -3.14159, -3.14159, -3.14159]];
-  actual = util.toPrecision(matrix, 2);
-  expected = [['3.1', '3.1', '3.1', '3.1'], ['-3.1', '-3.1', '-3.1', '-3.1'], ['3.1', '3.1', '3.1', '3.1'], ['-3.1', '-3.1', '-3.1', '-3.1']];
-  test.deepEqual(actual, expected);
-  return test.done();
-};
-
 exports.to2d = function(test) {
   var actual, expected, matrix;
   matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]];

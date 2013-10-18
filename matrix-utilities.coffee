@@ -37,12 +37,6 @@ umd
 
 		result
 
-	toPrecision: (matrix, precision = 20) ->
-
-		for row, j in matrix
-			for value, k in row
-				matrix[j][k] = value.toPrecision precision
-
 	to2d: (matrix) ->
 
 		[
