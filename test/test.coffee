@@ -1,5 +1,5 @@
 
-util = require '../matrixutilities'
+util = require '../matrix-utilities'
 
 exports.Identity = (test) ->
 
