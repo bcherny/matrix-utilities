@@ -1,6 +1,6 @@
 {
-  "name": "matrixutilities",
-  "version": "1.2.1",
+  "name": "matrix-utilities",
+  "version": "1.2.2",
   "description": "Tiny, high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.",
   "main": "matrix-utilities.js",
   "repository": {

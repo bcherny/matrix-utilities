@@ -34,11 +34,12 @@ module.exports = (grunt) ->
 	config.uglify.standard.files[name + '.min.js'] = [name + '.js']
 	config.umd.all =
 		src: name + '.js'
-		objectToExport: name
+		objectToExport: name.replace '-', ''
 		amdModuleId: name
 		globalAlias: name
 		deps:
 			default: deps or []
+		template: 'grunt-umd-template.hbs'
 
 	# load config
 	grunt.config.init config

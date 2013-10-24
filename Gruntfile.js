@@ -39,12 +39,13 @@ module.exports = function(grunt) {
   config.uglify.standard.files[name + '.min.js'] = [name + '.js'];
   config.umd.all = {
     src: name + '.js',
-    objectToExport: name,
+    objectToExport: name.replace('-', ''),
     amdModuleId: name,
     globalAlias: name,
     deps: {
       "default": deps || []
-    }
+    },
+    template: 'grunt-umd-template.hbs'
   };
   grunt.config.init(config);
   grunt.loadNpmTasks('grunt-contrib-coffee');
