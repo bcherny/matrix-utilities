@@ -11,6 +11,7 @@ Tiny (524b gzipped), high performance utilities for performing 2/3D matrix calcu
 util = require 'matrix-utilities'
 
 util.Identity() # returns new 3D identity matrix
+util.add matrix1, matrix2 # returns matrix1 + matrix2
 util.multiply matrix1, matrix2 # returns matrix1×matrix2
 util.flip matrix # flip a matrix along x=y
 util.to2d matrix
@@ -59,6 +60,27 @@ util.flip [
 		[1, 4, 7]
 		[2, 5, 8]
 		[3, 6, 9]
+	]
+###
+
+# add
+
+one = [
+	[2, 4]
+	[6, 8]
+]
+
+two = [
+	[1, 3]
+	[5, 7]
+]
+
+util.add one, two
+###
+	#=>
+	[
+		[3, 7]
+		[11, 15]
 	]
 ###
 

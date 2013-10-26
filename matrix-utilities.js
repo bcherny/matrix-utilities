@@ -14,6 +14,25 @@ var matrixutilities;
 matrixutilities = (function() {
   var util;
   return util = {
+    add: function(one, two) {
+      var i, j, result, row, value, _i, _j, _len, _len1;
+      if (one.length !== two.length) {
+        throw new Error('Matrix y dimensions do not match');
+      }
+      result = new Array(one.length);
+      for (i = _i = 0, _len = one.length; _i < _len; i = ++_i) {
+        row = one[i];
+        if (row.length !== two[i].length) {
+          throw new Error("Matrix x dimensions do not match on row " + (i + 1));
+        }
+        result[i] = new Array(row.length);
+        for (j = _j = 0, _len1 = row.length; _j < _len1; j = ++_j) {
+          value = row[j];
+          result[i][j] = value + two[i][j];
+        }
+      }
+      return result;
+    },
     multiply: function(one, two) {
       var j, k, l, result, row, size, sum, value, _i, _j, _len, _len1;
       if (one[0].length !== two.length) {
