@@ -14,6 +14,64 @@ exports.Identity = (test) ->
 	test.deepEqual actual, expected
 	test.done()
 
+exports.add = (test) ->
+	one = two = [
+		[ 1, 2, 4, 8 ]
+		[ 16, 32, 64, 128 ]
+	]
+	expected = [
+		[ 2, 4, 8, 16 ]
+		[ 32, 64, 128, 256 ]
+	]
+	actual = util.add one, two
+	test.deepEqual actual, expected
+
+	one = [
+		[ 1, 2 ]
+		[ 4, 8 ]
+		[ 16, 32 ]
+		[ 64, 128 ]
+	]
+	two = [
+		[ 2, 3 ]
+		[ 5, 7 ]
+		[ 11, 13 ]
+		[ 17, 19 ]
+	]
+	expected = [
+		[ 3, 5 ]
+		[ 9, 15 ]
+		[ 27, 45 ]
+		[ 81, 147 ]
+	]
+	actual = util.add one, two
+	test.deepEqual actual, expected
+
+	one = [
+		[ 1, 2 ]
+		[ 3, 4 ]
+	]
+	two = [
+		[ 5, 6 ]
+		[ 7, 8 ]
+		[ 9, 10 ]
+	]
+	test.throws ->
+		util.add one, two
+
+	one = [
+		[ 1, 2 ]
+		[ 3, 4 ]
+	]
+	two = [
+		[ 5, 6 ]
+		[ 7, 8, 9 ]
+	]
+	test.throws ->
+		util.add one, two
+
+	test.done()
+
 exports.multiply = (test) ->
 
 	one = [

@@ -11,6 +11,30 @@ exports.Identity = function(test) {
   return test.done();
 };
 
+exports.add = function(test) {
+  var actual, expected, one, two;
+  one = two = [[1, 2, 4, 8], [16, 32, 64, 128]];
+  expected = [[2, 4, 8, 16], [32, 64, 128, 256]];
+  actual = util.add(one, two);
+  test.deepEqual(actual, expected);
+  one = [[1, 2], [4, 8], [16, 32], [64, 128]];
+  two = [[2, 3], [5, 7], [11, 13], [17, 19]];
+  expected = [[3, 5], [9, 15], [27, 45], [81, 147]];
+  actual = util.add(one, two);
+  test.deepEqual(actual, expected);
+  one = [[1, 2], [3, 4]];
+  two = [[5, 6], [7, 8], [9, 10]];
+  test.throws(function() {
+    return util.add(one, two);
+  });
+  one = [[1, 2], [3, 4]];
+  two = [[5, 6], [7, 8, 9]];
+  test.throws(function() {
+    return util.add(one, two);
+  });
+  return test.done();
+};
+
 exports.multiply = function(test) {
   var actual, expected, one, two;
   one = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];

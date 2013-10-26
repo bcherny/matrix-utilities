@@ -1,7 +1,24 @@
 matrixutilities = do ->
 
 	util =
-	
+
+		add: (one, two) ->
+			unless one.length is two.length
+				throw new Error 'Matrix y dimensions do not match'
+
+			result = new Array one.length
+
+			for row, i in one
+				unless row.length is two[i].length
+					throw new Error "Matrix x dimensions do not match on row #{i + 1}"
+
+				result[i] = new Array row.length
+
+				for value, j in row
+					result[i][j] = value + two[i][j]
+
+			result
+
 		multiply: (one, two) ->
 
 			if one[0].length isnt two.length
