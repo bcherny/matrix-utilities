@@ -3,16 +3,18 @@ matrixutilities = do ->
 	util =
 
 		add: (one, two) ->
-			unless one.length is two.length
+
+			if one.length isnt two.length
 				throw new Error 'Matrix y dimensions do not match'
 
-			result = new Array one.length
+			result = []
 
 			for row, i in one
-				unless row.length is two[i].length
+				
+				if row.length isnt two[i].length
 					throw new Error "Matrix x dimensions do not match on row #{i + 1}"
 
-				result[i] = new Array row.length
+				result[i] = []
 
 				for value, j in row
 					result[i][j] = value + two[i][j]
