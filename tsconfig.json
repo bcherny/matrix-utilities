@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "outDir": ".",
+    "sourceMap": false,
+    "target": "es6"
+  },
+  "files": [
+    "./index.ts"
+  ]
+}

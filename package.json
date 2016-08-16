@@ -1,11 +1,13 @@
 {
-  "name": "matrix-utilities",
-  "version": "1.2.4",
+  "name": "matrix",
+  "version": "2.0.0",
   "description": "Tiny, high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.",
-  "main": "matrix-utilities.js",
+  "main": "./index.js",
+  "main:esnext": "./index.es2015.js",
+  "typings": "./index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eighttrackmind/matrix-utilities.git"
+    "url": "git+ssh://git@github.com/bcherny/matrix.git"
   },
   "keywords": [
     "matrix",
@@ -23,18 +25,19 @@
   "author": "Boris Cherny <boris@performancejs.com>",
   "license": "MIT",
   "readmeFilename": "README.md",
+  "homepage": "https://github.com/bcherny/matrix#readme",
   "bugs": {
-    "url": "https://github.com/eighttrackmind/matrix-utilities/issues"
+    "url": "https://github.com/bcherny/matrix/issues"
   },
   "scripts": {
-    "test": "./node_modules/.bin/nodeunit test"
+    "build": "tsc -d -m es2015 --outDir .; mv ./index.js ./index.es2015.js; tsc -t es5 -m commonjs --outDir .;",
+    "watch": "tsc -w",
+    "test": "ava",
+    "tdd": "npm run watch & npm test -- --watch"
   },
   "devDependencies": {
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt": "~0.4.1",
-    "nodeunit": "~0.8.1",
-    "grunt-umd": "~1.3.0"
+    "ava": "^0.16.0",
+    "typescript": "^2.0.0"
   },
   "testling": {
     "files": "test/test.js",

@@ -1,14 +1,14 @@
-# matrix-utilities
+# matrix
 
-[![Build Status](https://travis-ci.org/eighttrackmind/matrix-utilities.png)](https://travis-ci.org/eighttrackmind/matrix-utilities.png)
-[![browser support](https://ci.testling.com/eighttrackmind/matrix-utilities.png)](https://ci.testling.com/eighttrackmind/matrix-utilities)
+[![Build Status](https://travis-ci.org/bcherny/matrix.png)](https://travis-ci.org/bcherny/matrix.png)
+[![browser support](https://ci.testling.com/bcherny/matrix.png)](https://ci.testling.com/bcherny/matrix)
 
 Tiny (607b gzipped), high performance utilities for performing 2/3D matrix calculations. Full unit test coverage, compatible with Node/CommonJS, AMD, and browser globals.
 
 ## API
 
 ```coffee
-util = require 'matrix-utilities'
+util = require 'matrix'
 
 util.Identity() # returns new 3D identity matrix
 util.add matrix1, matrix2 # returns matrix1 + matrix2
@@ -21,7 +21,7 @@ util.to3d matrix
 ## examples
 
 ```coffee
-util = require 'matrix-utilities'
+util = require 'matrix'
 
 # identity
 

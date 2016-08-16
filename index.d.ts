@@ -1,0 +1,11 @@
+export declare function add(one: Matrix, two: Matrix): Matrix;
+export declare function multiply(one: Matrix, two: Matrix): Matrix;
+export declare function flip(matrix: Matrix): Matrix;
+export declare function to2d(matrix: Matrix): Matrix2d;
+export declare function to3d(matrix: Matrix): Matrix3d;
+export declare function Identity(): Matrix3d;
+export declare type Matrix = number[][];
+export declare type Row2d = [number, number, number];
+export declare type Matrix2d = [Row2d, Row2d];
+export declare type Row3d = [number, number, number, number];
+export declare type Matrix3d = [Row3d, Row3d, Row3d, Row3d];
