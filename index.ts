@@ -56,12 +56,6 @@ export function flip(matrix: Matrix): Matrix {
 }
 
 export function to2d(matrix: Matrix): Matrix2d {
-  if (matrix.length !== 4) {
-    throw new RangeError('Matrix y dimension should be 4')
-  }
-  if (matrix[0].length !== 3) {
-    throw new RangeError('Matrix x dimension should be 3')
-  }
   return [
     [matrix[0][0] || 1, matrix[0][1] || 0, matrix[0][3] || 0],
     [matrix[1][0] || 0, matrix[1][1] || 0, matrix[1][3] || 0]

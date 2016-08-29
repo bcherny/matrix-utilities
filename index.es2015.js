@@ -35,13 +35,16 @@ export function multiply(one, two) {
     return result;
 }
 export function flip(matrix) {
-    const result = [];
+    const result = [[]];
     for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; i++) {
-            (result[j] || (result[j] = []))[i] = matrix[i][j];
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (result[j] === undefined) {
+                result[j] = [];
+            }
+            result[j][i] = matrix[i][j];
         }
     }
-    return matrix;
+    return result;
 }
 export function to2d(matrix) {
     return [

@@ -7,104 +7,101 @@ Tiny (607b gzipped), high performance utilities for performing 2/3D matrix calcu
 
 ## API
 
-```coffee
-util = require 'matrix'
+```js
+import * as matrix from 'matrix'
+// or, use require()
+// or, use window.matrix
 
-util.Identity() # returns new 3D identity matrix
-util.add matrix1, matrix2 # returns matrix1 + matrix2
-util.multiply matrix1, matrix2 # returns matrix1×matrix2
-util.flip matrix # flip a matrix along x=y
-util.to2d matrix
-util.to3d matrix
+matrix.Identity() // returns new 3D identity matrix
+matrix.add(matrix1, matrix2 // returns matrix1 + matrix2
+matrix.multiply(matrix1, matrix2) // returns matrix1×matrix2
+matrix.flip(matrix) // flip a matrix along x=y
+matrix.to2d(matrix)
+matrix.to3d(matrix)
 ```
 
 ## examples
 
-```coffee
-util = require 'matrix'
+```js
+import * as matrix from 'matrix'
 
-# identity
+////// identity
 
-matrix = util.Identity()
-###
-	#=>
+const myMatrix = util.Identity()
+/* =>
 	[
-		[1, 0, 0, 0]
-		[0, 1, 0, 0]
-		[0, 0, 1, 0]
+		[1, 0, 0, 0],
+		[0, 1, 0, 0],
+		[0, 0, 1, 0],
 		[0, 0, 0, 1]
 	]
-###
+*/
 
-# to2d
+////// to2d
 
-util.to2d matrix
-###
-	#=>
+matrix.to2d(myMatrix)
+/* =>
 	[
-		[1, 0, 0]
+		[1, 0, 0],
 		[0, 1, 0]
 	]
-###
+*/
 
-# flip
+////// flip
 
-util.flip [
-	[1, 2, 3]
-	[4, 5, 6]
+matrix.flip([
+	[1, 2, 3],
+	[4, 5, 6],
 	[7, 8, 9]
-]
-###
-	#=>
+])
+/* =>
 	[
 		[1, 4, 7]
 		[2, 5, 8]
 		[3, 6, 9]
 	]
-###
+*/
 
-# add
+////// add
 
-one = [
-	[2, 4]
+const one = [
+	[2, 4],
 	[6, 8]
 ]
 
-two = [
-	[1, 3]
+const two = [
+	[1, 3],
 	[5, 7]
 ]
 
-util.add one, two
-###
-	#=>
+matrix.add(one, two)
+/* =>
 	[
 		[3, 7]
 		[11, 15]
 	]
-###
+*/
 
-# multiply
+////// multiply
 
-one = [
-	[1, 2, 3]
-	[4, 5, 6]
+const three = [
+	[1, 2, 3],
+	[4, 5, 6],
 	[7, 8, 9]
 ]
 
-two = [
-	[1, 2]
-	[3, 4]
+const four = [
+	[1, 2],
+	[3, 4],
 	[5, 6]
 ]
 
-util.multiply one, two
-###
-	#=>
+util.multiply(three, four)
+/* =>
 	[
 		[22, 28]
 		[49, 64]
 		[76, 100]
 	]
-###
+*/
 ```

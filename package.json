@@ -30,7 +30,7 @@
     "url": "https://github.com/bcherny/matrix/issues"
   },
   "scripts": {
-    "build": "tsc -d -m es2015 --outDir .; mv ./index.js ./index.es2015.js; tsc -t es5 -m commonjs --outDir .;",
+    "build": "tsc -d -m es2015 --outDir .; mv ./index.js ./index.es2015.js; tsc -t es5 -m umd --outDir .;",
     "watch": "tsc -w",
     "test": "ava",
     "tdd": "npm run watch & npm test -- --watch"
